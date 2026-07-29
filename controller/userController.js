@@ -1,18 +1,20 @@
 const User = require('../models/user');
 
 // CREATE USER
-exports.createUser = async (req, res) => {
-  try {
-    const user = await User.create(req.body);
-    res.status(201).json({
-      success: true,
-      message: 'User created successfully',
-      data: user,
-    });
-  } catch (error) {
-    res.status(400).json({ success: false, message: error.message });
-  }
-};
+// exports.createUser = async (req, res) => {
+//   try {
+//     const user = await User.create(req.body);
+//     res.status(201).json({
+//       success: true,
+//       message: 'User created successfully',
+//       data: user,
+//     });
+//   } catch (error) {
+//     res.status(400).json({ success: false, message: error.message });
+//   }
+// };
+
+
 
 // GET ALL USERS
 exports.getUsers = async (req, res) => {
